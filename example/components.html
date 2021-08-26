@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Components - BFUI</title>
+      <!--Import Google Icon Font-->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+      <link href="style.css" rel="stylesheet">
+      <link href="prism.css" rel="stylesheet" />
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    </head>
+
+    <body class="altBg">
+      <main>
+        <div class="side-nav-container">
+          <div class="side-nav">
+             <i class="material-icons">play_arrow</i>
+             <i class="material-icons">replay</i>
+             <i class="material-icons">add</i>
+             <div class="side-nav-bottom">
+               <i class="material-icons">power_settings_new</i>
+             </div>
+          </div>
+        </div>
+        <div class="main-container">
+          <nav class="sticky">
+            <div id="brand" href="#">
+              <i id="menu-icon" class="material-icons">menu</i> <span>BATTLEFIELD UI</span>
+            </div>
+            <ul>
+              <li>
+                <a href="index.html" class="nav-link">
+                  home
+                </a>
+              </li>
+              <li>
+                <a href="multiplayer.html" class="nav-link">
+                  multiplayer
+                </a>
+              </li>
+              <li>
+                <a href="index.html" class="nav-link not-active">
+                  campaign
+                </a>
+              </li>
+              <li>
+                <a href="index.html" class="nav-link not-active">
+                  soldier
+                </a>
+              </li>
+              <li>
+                <a href="components.html" class="nav-link active">
+                  Components
+                </a>
+              </li>
+              <li>
+                <a href="./../index.html" class="nav-link">
+                  Welcome
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="container components">
+            <div class="card full">
+              <div class="card-container">
+                <div class="card-img">
+                  <img src="assets/ww1.jpg" style="object-position: 50%  30%" />
+                </div>
+                <div class="card-content">
+                  <span>Components - Get started soldier!</span>
+                  <p>This page will show you all the different parts of BFUI that you can use to build your own web application.</p>
+                </div>
+              </div>
+            </div>
+
+            <section>
+              <h1>Cards</h1>
+
+              <div class="card">
+                <div class="card-container">
+                  <div class="card-img">
+                    <img src="assets/card1.jpg" />
+                  </div>
+                  <div class="card-content">
+                    <span>Conquest</span>
+                    <p>Experience our signature game mode Conquest. Capture and Hold Objectives on large scale maps.</p>
+                    <a href="sorry.html">
+                      <div class="card-action">
+                        matchmake
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <pre data-src="components/card.html"></pre>
+            </section>
+
+            <section>
+              <h1>Buttons</h1>
+              <a class="btn" style="margin: 20px 0;">Button</a>
+              <a class="btn small" href=""><i class="material-icons">keyboard_arrow_left</i> Previous</a>
+              <a class="btn small">Next <i class="material-icons">keyboard_arrow_right</i></a>
+
+              <pre data-src="components/button.html"></pre>
+
+              <h1>Highlighted Button</h1>
+              <a class="btn highlight" style="margin: 20px 0;">SUBMIT</a>
+              <pre data-src="components/button-highlight.html"></pre>
+            </section>
+
+            <section>
+              <h1>Tables</h1>
+              <p>The highlight class is optional.</p>
+
+              <table class="highlight">
+                <thead>
+                  <tr>
+                      <th data-field="id">Name</th>
+                      <th data-field="name">Weapon Name</th>
+                      <th data-field="price">War bonds</th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td>D. Edwards</td>
+                    <td>Mauser C96</td>
+                    <td>1.200</td>
+                  </tr>
+                  <tr>
+                    <td>T.E. Lawrence</td>
+                    <td>Lee Enfield SMLE</td>
+                    <td>2.000</td>
+                  </tr>
+                  <tr>
+                    <td>M. von Richthofen</td>
+                    <td>Fokker</td>
+                    <td>5.200</td>
+                  </tr>
+                </tbody>
+              </table>
+              <pre data-src="components/table.html"></pre>
+            </section>
+
+            <section>
+              <h1>Input Fields</h1>
+              <form class="col s12">
+                <div class="row">
+                  <label for="first_name">First Name</label>
+                  <input placeholder="Placeholder" id="first_name" type="text">
+                  <label for="first_name">First Name</label>
+                  <input id="last_name" type="text">
+                </div>
+                <div class="row">
+                  <label for="disabled">Disabled</label>
+                  <input disabled value="Disabled input" id="disabled" type="text">
+                </div>
+                <div class="row">
+                  <label for="password">Password</label>
+                  <input id="password" type="password">
+                </div>
+                <div class="row">
+                  <label for="email">Email</label>
+                  <input id="email" type="email">
+                </div>
+              </form>
+              <pre data-src="components/forms.html"></pre>
+
+              <h1>Textarea</h1>
+              <label for="textarea">Text area</label>
+              <textarea id="textarea"></textarea>
+              <pre data-src="components/textarea.html"></pre>
+
+              <h1>Select</h1>
+              <label>Select</label>
+              <select>
+                <option value="" disabled selected>Choose your option</option>
+                <option value="1">Mosin Nagant</option>
+                <option value="2">Lee Enfield</option>
+                <option value="3">Springfield</option>
+              </select>
+              <pre data-src="components/select.html"></pre>
+
+              <h1>Radio Buttons</h1>
+              <form action="#">
+                <p>
+                  <input name="radio-group" type="radio" id="radio1" />
+                  <label for="radio1">Mosin Nagant</label>
+                </p>
+                <p>
+                  <input name="radio-group" type="radio" id="radio2" />
+                  <label for="radio2">Lee Enfield</label>
+                </p>
+                <p>
+                  <input name="radio-group" type="radio" id="radio3"  />
+                  <label for="radio3">Springfield</label>
+                </p>
+                  <p>
+                    <input name="radio-group" type="radio" id="radio4" disabled="disabled" />
+                    <label for="radio4">Maxim</label>
+                </p>
+              </form>
+              <pre data-src="components/radio.html"></pre>
+
+              <h1>Checkboxes</h1>
+              <form action="#">
+                <p>
+                  <input type="checkbox" id="checkbox1" />
+                  <label for="checkbox1">Total War</label>
+                </p>
+                <p>
+                  <input type="checkbox" id="checkbox2" checked />
+                  <label for="checkbox2">Trench Warfare</label>
+                </p>
+              </form>
+              <pre data-src="components/checkbox.html"></pre>
+            </section>
+          </div>
+
+      </div>
+      </main>
+      <script src="prism.js"></script>
+    </body>
+  </html>

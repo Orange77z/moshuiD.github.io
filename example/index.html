@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>BFUI</title>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta charset="UTF-8">
+      <meta name="description" content="A jab at making the BF1 UI in HTML/CSS.">
+      <meta name="author" content="Anders Enghoej">
+      <!--Facebook meta-->
+      <meta property="og:title" content="BFUI">
+      <meta property="og:description" content="A UI framework inspired by the Battlefield games">
+
+      <!--Import Google Icon Font-->
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+      <link href="style.css" rel="stylesheet">
+
+    </head>      
+    <body>
+      <main>
+        <div class="side-nav-container">
+          <div class="side-nav">
+			  <audio class="Player" src="bgm/index/1.mp3" controls id="indexBgmAudio"></audio>
+			  <script>
+				  function on()
+				  {
+					  indexBgmAudio.play();
+					  indexBgmAudio.addEventListener('ended',next,false);
+				  }
+				  var num=1;
+				  function next()
+				  {
+					  if(num>2)
+					  {
+					    num=1;
+					  }
+					  else
+					  {
+					    num+=1;  
+					  }
+					  indexBgmAudio.src="bgm/index/"+num+".mp3";
+					  indexBgmAudio.play();
+				  }
+			  </script>
+			  <a href="myinformation.html">
+				 <img class="icon"src="assets/icon.jpg"/>
+			  </a> 
+			 <a class="material-icons" onClick="on()">play_arrow</a>
+             <a class="material-icons" href="">replay</a>
+             <a class="material-icons" href="https://github.com/moshuiD">add</a>
+             <div class="side-nav-bottom">
+               <a class="material-icons" href="./../index.html">power_settings_new</a>
+            </div>
+          </div>
+        </div>
+        <div class="main-container">
+        <nav class="sticky">
+          <div id="brand" href="#">
+            <i id="menu-icon" class="material-icons">menu</i> <span>BATTLEFIELD UI</span>
+          </div>
+          <ul>
+            <li>
+              <a href="index.html" class="nav-link active">
+                主页
+              </a>
+            </li>
+            <li>
+              <a href="multiplayer.html" class="nav-link">
+              详细分类
+			  </a>
+            </li>
+            <li>
+              <a href="index.html" class="nav-link not-active">
+                加入游戏
+              </a>
+            </li>
+            <li>
+              <a href="index.html" class="nav-link not-active">
+                士兵
+              </a>
+            </li>
+            <li>
+              <a href="contactme.html" class="nav-link">
+                留言
+              </a>
+            </li>
+            <li>
+              <a href="./../index.html" class="nav-link">
+                返回首页
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+        <div class="container full">
+          <div class="card full">
+            <div class="card-container">
+              <div class="card-img">
+                <img src="assets/bg4.jpg" style="object-position: 50%  30%" />
+              </div>
+              <div class="card-content">
+                <span>欢迎来到墨水的网站!</span>
+                <p>左边的小三角形可以播放音乐哦</p>
+				<p>网站框架来自GitHub</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="container full">
+          <h2>选择您要观看的板块!</h2>
+          <div class="card">
+            <div class="card-container">
+              <div class="card-img">
+                <img src="assets/card1.jpg" />
+              </div>
+              <div class="card-content">
+                <span>技术&nbsp;</span>
+                <p>本人正在学习C#、C++ ，及一些简单逆向工程，这里有关于技术的内容</p>
+                <a href="technology.html">
+                  <div class="card-action hidden-action">
+                    观看
+                </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-container">
+              <div class="card-img">
+                <img src="assets/card2.jpg" />
+              </div>
+              <div class="card-content">
+                <span>游戏</span>
+                <p>本人喜欢战地系列游戏等一众FPS游戏，与开放世界游戏等，这里有关于游戏的内容</p>
+                <a href="game.html">
+                  <div class="card-action hidden-action">
+                    观看
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-container">
+              <div class="card-img">
+                <img src="assets/card3.jpg" />
+              </div>
+              <div class="card-content">
+                <span>下载</span>
+                <p>这里是我发布一些项目的下载入口</p>
+                <a href="sorry.html">
+                  <div class="card-action hidden-action">
+                    观看
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card small">
+            <div class="card-container">
+              <div class="card-img">
+                <img src="assets/card4.jpg" />
+              </div>
+              <div class="card-content">
+                <span>个人&nbsp;</span>
+                <p>这里有关于我个人的内容</p>
+				   <a href="myinformation.html">
+                  <div class="card-action hidden-action">
+                    观看
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="container full full-row">
+          <h2>友情链接</h2>
+          <div class="card">
+            <div class="card-container">
+              <div class="card-img">
+                <img src="assets/card5.jpg" />
+              </div>
+              <div class="card-content">
+                <span>BFBAN</span>
+                <p>一个成立于2018年1月29日的战地玩家社区自创非营利反作弊开发者组织，此网站为BFBAN GitHub储存库，您可以通过储存库的自述文件进入BFBAN官方网站。</p>
+                <a href="https://github.com/BFBAN">
+                  <div class="card-action hidden-action">
+                    前去看看
+                </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-container">
+              <div class="card-img">
+                <img src="assets/card6.jpg" />
+              </div>
+              <div class="card-content">
+                <span>此模板原储存库</span>
+                <p>原简介：This is a fan project that tries to recreate the Battlefield 1 UI with web technologies. The main menu UI elements are more or less exact derivatives from the games menu but some of the residing UI elements has been imagined in the vision of Battlefield 1's design. The design is made to be responsive and work across desktop, tablet, and mobile as well.</p>
+                <a href="https://github.com/Arth101/battlefield1UI">
+                  <div class="card-action hidden-action">
+                    前去看看
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container full">
+          <h3>在其他网站上找到我</h3>
+          <div class="card">
+            <div class="card-container">
+              <div class="card-img">
+                <img src="assets/card7.jpg" />
+              </div>
+              <div class="card-content">
+                <span>Github</span>
+                <p>GitHub是全球最大的面向开源及私有软件项目的托管平台。</p>
+                <a href="https://github.com/moshuiD">
+                  <div class="card-action hidden-action">
+                我的GitHub主页
+				  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-container">
+              <div class="card-img">
+                <img src="assets/card8.jpg" />
+              </div>
+              <div class="card-content">
+                <span>b站</span>
+                <p>哔哩哔哩（bilibili）现为国内领先的年轻人文化社区，该网站于2009年6月26日创建，被粉丝们亲切的称为“B站”。</p>
+                <a href="https://space.bilibili.com/273115635">
+                  <div class="card-action hidden-action">
+                    我的b站主页
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      </main>
+    </body>
+  </html>
